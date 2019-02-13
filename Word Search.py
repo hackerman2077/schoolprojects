@@ -1,28 +1,22 @@
-# STEP 1
-# DIALOGUES (D)
-dialogues = (
-['Type in your word. Do not use capitals.', 'which row is the first letter?', 'which column is the first letter?',
- '+1 POINT', 'YOU WIN!'])
+#STEP 1
+#DIALOGUES (D)
+dialogues = (['Type in your word. Do not use capitals.', 'which row is the first letter?', 'which column is the first letter?', '+1 POINT', 'YOU WIN!'])
 print('select difficulty')
-print('"fine()", "boring()", "chore()"')
+print('"fine", "boring", "chore"')
+#D END
 
-
-# D END
-
-# STEP 2
-# SCOREBOARD (B)
+#STEP 2
+#SCOREBOARD (B)
 def scoreboard():
     f = open('scoreboard.txt', 'w')
     f.write('WORDSEARCH SCOREBOARD\n')
     f.close()
+#B END
 
+#STEP 3
+#WORDSEARCHES (W)
 
-# B END
-
-# STEP 3
-# WORDSEARCHES (W)
-
-# FINE
+#FINE
 def fine():
     print('  C 1 2 3 4 5 6 7')
     print('R')
@@ -36,12 +30,12 @@ def fine():
     print('WORDS: Link, Zelda, Ganon, Din, Nayru\n')
     print(dialogues[0])
 
-    f = open('scoreboard.txt', 'a')
+    f = open('scoreboard.txt', 'w')
     search = ''
     while (search != 'x'):
         print("Enter 'x' to exit")
         search = input()
-        # LINK
+        #LINK
         if search == 'link':
             print(dialogues[1])
             row = input()
@@ -51,7 +45,7 @@ def fine():
                 if column == '2':
                     print(dialogues[3])
                     f.write('point\n')
-        # ZELDA
+        #ZELDA
         if search == 'zelda':
             print(dialogues[1])
             row = input()
@@ -61,7 +55,7 @@ def fine():
                 if column == '3':
                     print(dialogues[3])
                     f.write('point\n')
-        # GANON
+        #GANON
         if search == 'ganon':
             print(dialogues[1])
             row = input()
@@ -71,7 +65,7 @@ def fine():
                 if column == '7':
                     print(dialogues[3])
                     f.write('point\n')
-        # DIN
+        #DIN
         if search == 'din':
             print(dialogues[1])
             row = input()
@@ -81,7 +75,7 @@ def fine():
                 if column == '6':
                     print(dialogues[3])
                     f.write('point\n')
-        # NAYRU
+        #NAYRU
         if search == 'nayru':
             print(dialogues[1])
             row = input()
@@ -102,8 +96,7 @@ def fine():
         if sum >= 5:
             print("You win!")
 
-
-# BORING
+#BORING
 def boring():
     print('  C 1 2 3 4 5 6 7 8 9')
     print('R')
@@ -118,12 +111,12 @@ def boring():
     print('9   s t v i r u s i k')
     print('WORDS: Leon, Kennedy, Claire, Redfield, Sherry, Birkin, Mr X, Hunk, T Virus, Umbrella')
 
-    f = open('scoreboard.txt', 'a')
+    f = open('scoreboard.txt', 'w')
     search = ''
     while (search != 'x'):
         print("Enter 'x' to exit")
         search = input()
-        # LEON
+        #LEON
         if search == 'leon':
             print(dialogues[1])
             row = input()
@@ -133,7 +126,7 @@ def boring():
                 if column == '1':
                     print(dialogues[3])
                     f.write('point\n')
-        # KENNEDY
+        #KENNEDY
         if search == 'kennedy':
             print(dialogues[1])
             row = input()
@@ -143,7 +136,7 @@ def boring():
                 if column == '6':
                     print(dialogues[3])
                     f.write('point\n')
-        # CLAIRE
+        #CLAIRE
         if search == 'claire':
             print(dialogues[1])
             row = input()
@@ -153,7 +146,7 @@ def boring():
                 if column == '2':
                     print(dialogues[3])
                     f.write('point\n')
-        # REDFIELD
+        #REDFIELD
         if search == 'redfield':
             print(dialogues[1])
             row = input()
@@ -163,7 +156,7 @@ def boring():
                 if column == '1':
                     print(dialogues[3])
                     f.write('point\n')
-        # SHERRY
+        #SHERRY
         if search == 'sherry':
             print(dialogues[1])
             row = input()
@@ -173,17 +166,17 @@ def boring():
                 if column == '1':
                     print(dialogues[3])
                     f.write('point\n')
-        # BIRKIN
+        #BIRKIN
         if search == 'birkin':
             print(dialogues[1])
             row = input()
-            if row == '1':
+            if row == '2':
                 print(dialogues[2])
                 column = input()
-                if column == '7':
+                if column == '3':
                     print(dialogues[3])
                     f.write('point\n')
-        # MR X
+        #MR X
         if search == 'mr x':
             print(dialogues[1])
             row = input()
@@ -193,7 +186,7 @@ def boring():
                 if column == '1':
                     print(dialogues[3])
                     f.write('point\n')
-        # HUNK
+        #HUNK
         if search == 'hunk':
             print(dialogues[1])
             row = input()
@@ -203,17 +196,17 @@ def boring():
                 if column == '1':
                     print(dialogues[3])
                     f.write('point\n')
-        # T VIRUS
+        #T VIRUS
         if search == 't virus':
             print(dialogues[1])
             row = input()
             if row == '9':
                 print(dialogues[2])
                 column = input()
-                if column == '8':
-                    print(dialogues[2])
+                if column == '2':
+                    print(dialogues[3])
                     f.write('point\n')
-        # UMBRELLA
+        #UMBRELLA
         if search == 'umbrella':
             print(dialogues[1])
             row = input()
@@ -234,8 +227,7 @@ def boring():
         if sum >= 10:
             print("You win!")
 
-
-# CHORE
+#CHORE
 def chore():
     print('  C 1 2 3 4 5 6 7 8 9 10 11 12 13')
     print('R')
@@ -251,15 +243,14 @@ def chore():
     print('10  i t c q v r p o j h  f  v  i')
     print('11  d d o g i n e k a n  s  z  b')
     print('12  k l e w o r r o s y  y  o  j')
-    print(
-        'WORDS: Snake, Solid, Liquid, Naked, Venom, Big Boss, Raiden, Ocelot, Sniper Wolf, Quiet, Joy, Sorrow, End, Fox, D Dog')
+    print('WORDS: Snake, Solid, Liquid, Naked, Venom, Big Boss, Raiden, Ocelot, Sniper Wolf, Quiet, Joy, Sorrow, End, Fox, D Dog')
 
-    f = open('scoreboard.txt', 'a')
+    f = open('scoreboard.txt', 'w')
     search = ''
     while (search != 'x'):
         print("Enter 'x' to exit")
         search = input()
-        # SNAKE
+        #SNAKE
         if search == 'snake':
             print(dialogues[1])
             row = input()
@@ -269,7 +260,7 @@ def chore():
                 if column == '11':
                     print(dialogues[3])
                     f.write('point\n')
-        # SOLID
+        #SOLID
         if search == 'solid':
             print(dialogues[1])
             row = input()
@@ -279,7 +270,7 @@ def chore():
                 if column == '3':
                     print(dialogues[3])
                     f.write('point\n')
-        # LIQUID
+        #LIQUID
         if search == 'liquid':
             print(dialogues[1])
             row = input()
@@ -289,7 +280,7 @@ def chore():
                 if column == '1':
                     print(dialogues[3])
                     f.write('point\n')
-        # NAKED
+        #NAKED
         if search == 'naked':
             print(dialogues[1])
             row = input()
@@ -299,7 +290,7 @@ def chore():
                 if column == '6':
                     print(dialogues[3])
                     f.write('point\n')
-        # VENOM
+        #VENOM
         if search == 'venom':
             print(dialogues[1])
             row = input()
@@ -309,7 +300,7 @@ def chore():
                 if column == '5':
                     print(dialogues[3])
                     f.write('point\n')
-        # BIG BOSS
+        #BIG BOSS
         if search == 'big boss':
             print(dialogues[1])
             row = input()
@@ -319,7 +310,7 @@ def chore():
                 if column == '13':
                     print(dialogues[3])
                     f.write('point\n')
-        # RAIDEN
+        #RAIDEN
         if search == 'raiden':
             print(dialogues[1])
             row = input()
@@ -329,7 +320,7 @@ def chore():
                 if column == '2':
                     print(dialogues[3])
                     f.write('point\n')
-        # OCELOT
+        #OCELOT
         if search == 'ocelot':
             print(dialogues[1])
             row = input()
@@ -339,7 +330,7 @@ def chore():
                 if column == '8':
                     print(dialogues[3])
                     f.write('point\n')
-        # SNIPDER WOLF
+        #SNIPDER WOLF
         if search == 'sniper wolf':
             print(dialogues[1])
             row = input()
@@ -349,7 +340,7 @@ def chore():
                 if column == '11':
                     print(dialogues[3])
                     f.write('point\n')
-        # QUIET
+        #QUIET
         if search == 'quiet':
             print(dialogues[1])
             row = input()
@@ -359,7 +350,7 @@ def chore():
                 if column == '9':
                     print(dialogues[3])
                     f.write('point\n')
-        # JOY
+        #JOY
         if search == 'joy':
             print(dialogues[1])
             row = input()
@@ -369,7 +360,7 @@ def chore():
                 if column == '13':
                     print(dialogues[3])
                     f.write('point\n')
-        # SORROW
+        #SORROW
         if search == 'sorrow':
             print(dialogues[1])
             row = input()
@@ -379,7 +370,7 @@ def chore():
                 if column == '9':
                     print(dialogues[3])
                     f.write('point\n')
-        # END
+        #END
         if search == 'end':
             print(dialogues[1])
             row = input()
@@ -389,7 +380,7 @@ def chore():
                 if column == '10':
                     print(dialogues[3])
                     f.write('point\n')
-        # FOX
+        #FOX
         if search == 'fox':
             print(dialogues[1])
             row = input()
@@ -399,7 +390,7 @@ def chore():
                 if column == '5':
                     print(dialogues[3])
                     f.write('point\n')
-        # D DOG
+        #D DOG
         if search == 'd dog':
             print(dialogues[1])
             row = input()
@@ -419,18 +410,17 @@ def chore():
                     sum = sum + 1
         if sum >= 15:
             print("You win!")
+#W END
 
-
-# W END
-
-# STEP 4
-# PLAY (P)
+#STEP 4
+#PLAY (P)
 difficulty = input()
 if difficulty == 'fine':
     fine()
 elif difficulty == 'boring':
     boring()
-# else difficulty == 'chore':
-#     chore()
-'''cannot figure out why this else statement won't cooperate'''
-# P END
+elif difficulty == 'chore':
+    chore()
+else:
+    print("enter a valid difficulty")
+#P END
